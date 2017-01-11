@@ -1,0 +1,45 @@
+\section{Wykorzystane biblioteki}
+
+\subsection{PNG -- pnmtopng}
+
+\subsubsection{Instalacja}
+
+\textbf{pnmtopng} jest elementem pakietu NetPBM. Aby umożliwić korzystanie z biblioteki na systemie Unixowym, należy:
+
+\begin{enumerate}
+	\item Posiadać zainstalowane wymagane LibPNG, ZLIB, dowolny kompilator języka C oraz Perl w wersji 6.0 lub nowszy.
+	\item Pobrać pliki źródłowe spakowane do formatu .tar ze strony SourceForge (\url{https://sourceforge.net/projects/netpbm/files/}).
+	
+	\item Wypakować pliki do wybranego przez siebie folderu.
+	
+	\item Wykonać komendy
+	\begin{lstlisting}[language=bash]
+	./configure
+	make package
+	./installnetpbm
+	\end{lstlisting}
+\end{enumerate}
+
+W przypadku Windowsa, należy posłużyć środowiskami Cygwin lub Djgpp.
+
+Prostszą alternatywą jest pobranie skompilowanych plików binarnych ze strony: \url{http://gnuwin32.sourceforge.net/packages/netpbm.htm}
+
+\subsubsection{Uruchamianie}
+
+Aby uruchomić kompresję plików, należy posłużyć się aplikacją \textbf{pnmtopng}. Przykładowe wywołanie programu w celu kompresji pliku \textit{clegg.pp\textsl{}m}:
+
+\begin{lstlisting}[language=bash]
+	pnmtopng clegg.pnm >clegg.png
+\end{lstlisting}
+
+\subsection{JPEG-LS -- SPMG/JPEG-LS}
+
+\subsubsection{Instalacja}
+
+\subsubsection{Uruchamianie}
+
+\subsection{JPEG2000 - JasPer}
+
+\subsubsection{Instalacja}
+
+\subsubsection{Uruchamianie}
