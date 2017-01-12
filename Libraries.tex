@@ -38,8 +38,52 @@ Aby uruchomić kompresję plików, należy posłużyć się aplikacją \textbf{p
 
 \subsubsection{Uruchamianie}
 
-\subsection{JPEG2000 - JasPer}
+\subsection{JPEG2000 -- JasPer}
 
 \subsubsection{Instalacja}
 
+\textbf{JasPer} jest otwarto źródłową biblioteką zawierającą implementację algorytmu JPEG2000. W celu instalacji na systemie Windows należy:
+
+\begin{enumerate}
+	\item Pobrać i wypakować pliki źródłowe ze strony projektu (\url{http://www.ece.uvic.ca/~frodo/jasper/}) do wybranej przez siebie lokalizacji.
+	
+	\item Utworzenie dodatkowy zmiennych środowiskowych:
+	\begin{enumerate}
+		\item \textbf{\%SOURCE\textunderscore DIR\%} -- katalog nadrzędny, w którym wypakowane zostały pobrane pliki
+		\item \textbf{\%BUILD\textunderscore DIR\%} -- ścieżka do katalogu używanego do zbudowania aplikacji
+		\item \textbf{\%INSTALL\textunderscore DIR\%} -- ścieżka do katalogu używanego do zainstalowania aplikacji
+	\end{enumerate}
+	Zmienne te są zdefiniowane pliku make i będą wykorzystywane w trakcie instalacji.
+	
+	\item W wierszy poleceń wykonać polecenie:
+	
+	\begin{lstlisting}[language=bash]
+	cmake -help
+	\end{lstlisting}
+	
+	Pozwala to podejrzeć nazwy wszystkich dostępnych generatorów (programów umożliwiających kompilację plików źródłowych).
+	
+	\item Za pomocą wybranego przez siebie generatora (parametr -G) wykonać komendę tworzącą plik solucji .sln.
+	
+	\begin{lstlisting}[language=bash]
+	cmake -G "Visual Studio 14 2015 Win64" -H%SOURCE_DIR% -B%BUILD_DIR% ^ -DCMAKE_INSTALL_PREFIX=%INSTALL_DIR%
+	\end{lstlisting}
+	
+	\item W wierszu poleceń programisty (ang. \textit{Developer Command Line}) wykonać komendę:
+	
+	\begin{lstlisting}[language=bash]
+	msbuild %build_dir%\INSTALL.vcxproj
+	\end{lstlisting}
+	
+	Spowoduje to utworzenie skompilowanego programu jasper.exe w ścieżce podanej w \%INSTALL\textunderscore DIR\%.
+\end{enumerate}
+
+
+
 \subsubsection{Uruchamianie}
+
+Aby uruchomić program jasper.exe, należy w pierwszej kolejności skopiować do tego samego katalogu bibliotekę \textit{libjasper.dll}, wygenerowaną wcześniej w folderze \textit{lib}. Może również dojść do sytuacji, w jakiej nie zostanie wykryta biblioteka \textit{ucrtbased.dll}. W takim przypadku należy pobrać ją z internetu i wypakować ją w \textit{$C:\backslash Windows\backslash System32\backslash$}. Przykładowa komenda uruchamiająca kompresję (plik clegg.ppm):
+
+\begin{lstlisting}[language=bash]
+jasper.exe --input clegg.ppm --output clegg.jp2
+\end{lstlisting}
