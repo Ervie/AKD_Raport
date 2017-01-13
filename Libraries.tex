@@ -29,14 +29,43 @@ Prostszą alternatywą jest pobranie skompilowanych plików binarnych ze strony:
 Aby uruchomić kompresję plików, należy posłużyć się aplikacją \textbf{pnmtopng}. Przykładowe wywołanie programu w celu kompresji pliku \textit{clegg.pp\textsl{}m}:
 
 \begin{lstlisting}[language=bash]
-	pnmtopng clegg.pnm >clegg.png
+	pnmtopng clegg.ppm >clegg.png
 \end{lstlisting}
 
 \subsection{JPEG-LS -- SPMG/JPEG-LS}
 
 \subsubsection{Instalacja}
 
+\textbf{JPEG-LS} jest kodekiem implementującym algorytm kompresji i dekompresji do formaty Loseless JPEG (JPEG-LS). Aby móc skorzystać z algorytmu, należy:
+
+\begin{enumerate}
+	\item Pobrać pliki źródłowe ze strony domowej projektu (\url{http://www.stat.columbia.edu/~jakulin/jpeg-ls/mirror.htm}) i wypakować do wybranego przez siebie folderu.
+	\item W folderze z wypakowanymi plikami wykonać komendę:
+	
+	\begin{lstlisting}[language=bash]
+	make clean <nazwa>
+	\end{lstlisting}
+	
+	Gdzie <nazwa> określa, który program chcmy skompilować.
+	
+	\begin{itemize}
+		\item locoe -- kompresor
+		\item locod -- dekompresor
+	\end{itemize}
+	
+	Po tej czynności utworzą się odpowiednie pliki wykonywalne
+	
+\end{enumerate}
+
 \subsubsection{Uruchamianie}
+
+Wywołanie kompresji obrazu można uzyskać za pomocą linii komend:
+
+\begin{lstlisting}[language=bash]
+	locoe [dodatkowe_flagi] clegg.ppm [-ooutfile]
+\end{lstlisting}
+
+Nazwa pliku wyjściowego jest opcjonalna, jest ona generowana na podstawie nazwy pliku wejściowego. Alternatywą jest wykorzystanie programu okienkowego \textbf{JLSEncoder} dostarczanego razem z plikami źródłowymi. Program ten posiada prosty interfejs pozwalający wybrać pliki z okien dialogowych oraz wyświetla statystyki po wykonaniu konwersji (czas wykonania, stopień konwersji itp.).
 
 \subsection{JPEG2000 -- JasPer}
 
