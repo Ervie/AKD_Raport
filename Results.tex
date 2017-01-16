@@ -1,1 +1,279 @@
 \section{Porównanie wyników}
+
+\subsection{Platforma testowa}
+
+Testy przeprowadzono na komputerze stancjonarnym o następującej specyfikacji:
+
+\begin{itemize}
+	\item System operacyjny -- Windows 10 Home 64-bit.
+	\item Procesor -- Intel Core i5 4590, taktowanie 3.30GHz.
+	\item Pamięć RAM -- 8 GB 2-Kanałowy DDR3, taktowanie 1600 MHz.
+\end{itemize}
+
+\subsection{Obrazy barwne}
+
+Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, będącej formą zapisu grafiki rastrowej. PPM jest przeznaczony dla obrazów w odcieniach szarości i zawiera maksymalnie do 24 bitów na piksel w trybie binarnym (8 bitów na każdy kolor).
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Clegg}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Frymire}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Lena3}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Monarch}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Peppers3}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Sail}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Serrano}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Tulips}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Obrazy czarno-białe}
+
+Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- odmiana bitmapy, będącej formą zapisu grafiki rastrowej. PGM jest przeznaczony dla obrazów odcieniach szarości i zawiera 8 bitów na piksel.
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Barb}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Boat}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{France}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Frog}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Goldhill2}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Lena2}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Library}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Mandrill}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Mountain}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Peppers2}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Washsat}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+	\centering
+	\caption{\textbf{Zelda}}
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|c|}                                             
+		\hline
+		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{x}}             &                     &                          &                             \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &                     &                          &                          \\\cline{3-5}
+		\textbf{JPEG2000} &                        &                     &                          &                      \\ \hline
+	\end{tabular}
+\end{table}

@@ -114,5 +114,5 @@ Nazwa pliku wyjściowego jest opcjonalna, jest ona generowana na podstawie nazwy
 Aby uruchomić program jasper.exe, należy w pierwszej kolejności skopiować do tego samego katalogu bibliotekę \textit{libjasper.dll}, wygenerowaną wcześniej w folderze \textit{lib}. Może również dojść do sytuacji, w jakiej nie zostanie wykryta biblioteka \textit{ucrtbased.dll}. W takim przypadku należy pobrać ją z internetu i wypakować ją w \textit{$C:\backslash Windows\backslash System32\backslash$}. Przykładowa komenda uruchamiająca kompresję (plik clegg.ppm):
 
 \begin{lstlisting}[language=bash]
-jasper.exe --input clegg.ppm --output clegg.jp2
+jasper.exe --input clegg.ppm --output clegg.jp2 --output-format jp2
 \end{lstlisting}
