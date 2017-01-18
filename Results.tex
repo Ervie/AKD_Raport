@@ -1,6 +1,6 @@
 \section{Porównanie wyników}
 
-\subsection{Platforma testowa i}
+\subsection{Platforma testowa}
 
 Testy przeprowadzono na komputerze stancjonarnym o następującej specyfikacji:
 
@@ -10,12 +10,16 @@ Testy przeprowadzono na komputerze stancjonarnym o następującej specyfikacji:
 	\item Pamięć RAM -- 8 GB 2-Kanałowy DDR3, taktowanie 1600 MHz.
 \end{itemize}
 
+\subsection{Badane wartości}
+
 Jakość kompresji określono za pomocą współczynnika kompresji, którego można przedstawić przy pomocy wzoru:
 \[
 CR = \frac{ Skompresowany Rozmiar }{ Nieskompresowany Rozmiar } 
 \]
 
 W tym przypadku, im niższa wartość tym lepszy algorytm. Współczynnik można również zapisać procentowo.
+
+Drugą mierzoną wartością był czas kompresji obliczany w milisekundach.
 
 \subsection{Obrazy barwne}
 
@@ -126,8 +130,14 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 \end{table}
 
 
-\clearpage
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./color.png}
+	\caption{Wykres słupkowy dla obrazów kolorowych}
+	\label{img:color}
+\end{figure}
 
+\clearpage
 
 
 
@@ -140,7 +150,7 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 
 Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- odmiana bitmapy, będącej formą zapisu grafiki rastrowej. PGM jest przeznaczony dla w obrazów odcieniach szarości i zawiera 8 bitów na piksel.
 
-\begin{table}[h]
+\begin{table}[!h]
 	\centering
 	\caption{\textbf{Barb}}
 	\label{my-label}
@@ -295,3 +305,13 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 		\textbf{JPEG2000} &                        &      128 KB               &       49,90 \%                  &        147              \\ \hline
 	\end{tabular}
 \end{table}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./greyset.png}
+	\caption{Wykres słupkowy dla obrazów w odcieniach szarości}
+	\label{img:greyset}
+\end{figure}
+
+\clearpage
