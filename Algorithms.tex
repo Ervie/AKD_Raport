@@ -1,7 +1,42 @@
-\section{Zasada działania algorytmów}
+\section{Użyte algorytmy}
 
 \subsection{PNG}
 
+\textbf{PNG} (ang. \textit{Portable Network Graphics}) -- to rastrowy format plików graficznych oraz system bezstratnej kompresji obrazów barwnych oraz w odcieniach szarości. Został opracowany w 1995 roku jako następca formatu GIF.
+Cechy algorytmu PNG:
+
+\begin{itemize}
+	\item Kompresor PNG jest schematem predykcyjnym.
+	\item Kompresja polega na wykonaniu transformacji każdej linii obrazu, po czym skompresowaniu go za pomocą algorytmu deflate.
+	\item Transformacja polega na obliczeniu różnicy pomiędzy wartością piksela, a wartością obliczoną na podstawie funkcji przewidującej.
+	\item Funkcje przewidujące to funkcje wyliczające wartości na podstawie wartości sąsiadujących pikseli.
+	\item Stosowane jest kodowanie LZ77, a do kodowania położenia i długości dopasowanej długości używa sie kodów przedrostkoych zmiennej długości (predefiniowanych lub kodów Huffmana z ograniczeniem).
+\end{itemize}
+
 \subsection{JPEG-LS}
 
+\textbf{JPEG-LS} jest nowym standardem komitetu JPEG dla kompresji bezstratnej obrazów wynalezionym w 1999 roku. Jest następcą Lossless JPG opartym o algorytm LOCO-I. Wykorzystywany jest ze względu na osiągane współczynniki kompresji (bliskie najlepszym) oraz dużą elastyczność umożliwiającą implementację rozszerzeń. Oprócz tego istnieje ,,prawie bezstratny'' (ang. \textit{nearly lossless}) wariant tego algorytmu.
+
+Uogólniony schemat algorytmu JPEG-LS:
+
+\begin{enumerate}
+	\item \textbf{Wykrywanie krawędzi pionowych i poziomych} -- stosowany w tym celu jest prosty predykat nieliniowy (wyznaczanie jedynie przy pomocy stałopozycyjnych operacji dodawania/odejmowania i porównań).
+	\item \textbf{Kodowanie} -- przy pomocy kodera entropijnego i zmodyfikowanej (uproszczonej) rodziny kodów Rice'a. Na tym etapie koduje się również błędy predykcji.
+	\item \textbf{Modelowanie kontekstu} -- wyznaczony na podstawie 3 gradientówModel jest dedykowany dla kodów rodziny Rice'a.
+\end{enumerate}
+
 \subsection{JPEG2000}
+
+\textbf{JPEG-2000} podobnie jak JPEG-LS jest następcą algorytmu JPEG wyłonionym w drodze konkursu. Opracowany w 2000 roku, stanowi standard komitetu JPEG zarówno dla stratnej, jak i bezstratnej kompresji obrazów. Jest algorytmem przeznaczonym dla obrazów barwnych i w odcieniach szarości opartym o transformatę falkową. Pozwala na kodowanie piramidowe i progresywne.
+
+Uogólniony schemat algorytmu JPEG2000:
+
+\begin{enumerate}
+	\item \textbf{Sprowadzenie nominalnego zakresu jasności pikseli do przedziały symetrycznego względem 0} -- jest to krok tożsamy z tym wykonywanym w algorytmie JPEG.
+	\item \textbf{Transformacja przestrzeni barw} -- może być nieodwracalna lub odwracalna. Ta pierwsza możliwa jest tylko razem z nieodwracalną transformatą falkową.
+	\item \textbf{Podział składowej na kafelki} -- realizowany poprzez nałożenie siatki prostokątnej na obraz (najczęściej o wymiarach 256 na 256 pikseli). Krawędzie siatki nie muszą się pokrywać z krawędziami obrazu, a obraz może mieścić się w jednym kafelku.
+	\item \textbf{Wyznaczenie transformaty falkowej dla każdego kafelka} -- przed transformatą należy ekstrapolować wiersze. W przypadku kompresji bezstratnej, stosujemy transformatę odwracalną.
+	\item \textbf{Kwantyzacja współczynników transformaty} -- dla kompresji bezstratnej krok zawsze wynosi 1. W przypadku operacji kompresji stratnej koder dobiera krok, aby możliwe było osiągnięcie zadanego współczynnika.
+	\item \textbf{Kodowanie skwantowanych współczynników} -- przy pomocy kodera arytmetycznego.
+	\item \textbf{Zapisanie zakodowanych danych w pliku o strukturze opisej przez standard}
+\end{enumerate}

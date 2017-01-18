@@ -1,6 +1,6 @@
 \section{Porównanie wyników}
 
-\subsection{Platforma testowa}
+\subsection{Platforma testowa i}
 
 Testy przeprowadzono na komputerze stancjonarnym o następującej specyfikacji:
 
@@ -9,6 +9,13 @@ Testy przeprowadzono na komputerze stancjonarnym o następującej specyfikacji:
 	\item Procesor -- Intel Core i5 4590, taktowanie 3.30GHz.
 	\item Pamięć RAM -- 8 GB 2-Kanałowy DDR3, taktowanie 1600 MHz.
 \end{itemize}
+
+Jakość kompresji określono za pomocą współczynnika kompresji, którego można przedstawić przy pomocy wzoru:
+\[
+CR = \frac{ Skompresowany Rozmiar }{ Nieskompresowany Rozmiar } 
+\]
+
+W tym przypadku, im niższa wartość tym lepszy algorytm. Współczynnik można również zapisać procentowo.
 
 \subsection{Obrazy barwne}
 
@@ -21,9 +28,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{2099 KB}}             &      475 KB               &         0,2262                 &              216               \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &        638  KB         &      0,3039                  &         58                 \\\cline{3-5}
-		\textbf{JPEG2000} &                        &        1370 KB             &       0,6525                   &        273              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{2099 KB}}             &      475 KB               &         22,62 \%                 &              216               \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &        638  KB         &      30,39 \%                  &         58                 \\\cline{3-5}
+		\textbf{JPEG2000} &                        &        1370 KB             &       65,25 \%                   &        273              \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -34,9 +41,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{3620 KB}}             &         380 KB              &        0,1049                    &            176                 \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &        914 KB             &         0,2525                 &           59               \\\cline{3-5}
-		\textbf{JPEG2000} &                        &         1561 KB               &          0,4311                &       719               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{3620 KB}}             &         380 KB              &        10,49 \%                   &            176                 \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &        914 KB             &         25,25 \%                 &           59               \\\cline{3-5}
+		\textbf{JPEG2000} &                        &         1561 KB               &          43,11 \%                &       719               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -47,9 +54,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{769 KB}}             &      466 KB               &        0,6054                  &         103                    \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &         436 KB            &      0,5681                    &         30                 \\\cline{3-5}
-		\textbf{JPEG2000} &                        &     435 KB             &         0,5793                 &       440               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{769 KB}}             &      466 KB               &        60,54 \%                  &         103                    \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &         436 KB            &      56,81 \%                   &         30                 \\\cline{3-5}
+		\textbf{JPEG2000} &                        &     435 KB             &         57,93 \%                 &       440               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -60,9 +67,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &      605 KB               &          0,5244                &            230                 \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       543 KB             &        0,4694                  &        44                  \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      432 KB               &         0,3744                 &       482               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &      605 KB               &          52,44 \%                &            230                 \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       543 KB             &        46,94 \%                 &        44                  \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      432 KB               &        37,44 \%                 &       482               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -73,9 +80,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{769 KB}}             &         418 KB            &        0,5433                  &         149                    \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &          377 KB           &         0,4901                 &          29                \\\cline{3-5}
-		\textbf{JPEG2000} &                        &        328 KB             &      0,4264                    &      367                \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{769 KB}}             &         418 KB            &        54,33 \%                  &         149                    \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &          377 KB           &         49,01 \%                 &          29                \\\cline{3-5}
+		\textbf{JPEG2000} &                        &        328 KB             &      42,64 \%                    &      367                \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -86,9 +93,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &       792 KB              &         0,6866                 &           156                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &        750  KB           &         0,6493                 &          45                \\\cline{3-5}
-		\textbf{JPEG2000} &                        &        512 KB             &      0,4437                    &      542                \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &       792 KB              &         68,66 \%                 &           156                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &        750  KB           &         64,93 \%                &          45                \\\cline{3-5}
+		\textbf{JPEG2000} &                        &        512 KB             &      44,37 \%                   &      542                \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -99,9 +106,9 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1464 KB}}             &       155 KB              &            0,1058              &           95                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &         287 KB            &      0,1960                    &          23                \\\cline{3-5}
-		\textbf{JPEG2000} &                        &         624 KB            &         0,4261                 &       740               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1464 KB}}             &       155 KB              &            10,58 \%              &           95                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &         287 KB            &      19,60 \%                   &          23                \\\cline{3-5}
+		\textbf{JPEG2000} &                        &         624 KB            &         42,61 \%                 &       740               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -112,13 +119,14 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &        667 KB             &      0,5788                    &          202                   \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &      603  KB             &       0,5235                   &          46                \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      478 KB               &       0,4146                   &     547                 \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{1153 KB}}             &        667 KB             &      57,88 \%                   &          202                   \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &      603  KB             &       52,35 \%                  &          46                \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      478 KB               &       41,46 \%                  &     547                 \\ \hline
 	\end{tabular}
 \end{table}
 
 
+\clearpage
 
 
 
@@ -132,16 +140,16 @@ Podstawą dla obrazów barwnych był format \textbf{PPM} -- odmiana bitmapy, bę
 
 Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- odmiana bitmapy, będącej formą zapisu grafiki rastrowej. PGM jest przeznaczony dla w obrazów odcieniach szarości i zawiera 8 bitów na piksel.
 
-\begin{table}[!h]
+\begin{table}[h]
 	\centering
 	\caption{\textbf{Barb}}
 	\label{my-label}
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      170 KB               &    0,6628                      &           58                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       152 KB              &        0,5917                  &        10                  \\\cline{3-5}
-		\textbf{JPEG2000} &                        &     150 KB                &        0,5824                  &        155              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      170 KB               &    66,28 \%                     &           58                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       152 KB              &        59,17 \%                 &        10                  \\\cline{3-5}
+		\textbf{JPEG2000} &                        &     150 KB                &        58,24 \%                 &        155              \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -152,9 +160,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &       149 KB              &      0,5794                    &           67                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       136 KB              &         0,5319                 &         10                 \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      141 KB               &         0,5507                 &        151              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &       149 KB              &      57,94 \%                    &           67                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       136 KB              &         53,19 \%                &         10                 \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      141 KB               &        55,07 \%                &        151              \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -165,9 +173,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{326 KB}}             &     18  KB              &    0,0527                      &            40                 \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &        58 KB             &       0,1763                   &          5                \\\cline{3-5}
-		\textbf{JPEG2000} &                        &     83 KB                &      0,2525                    &         142             \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{326 KB}}             &     18  KB              &    5,27 \%                     &            40                 \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &        58 KB             &       17,63 \%                  &          5                \\\cline{3-5}
+		\textbf{JPEG2000} &                        &     83 KB                &      25,25 \%                   &         142             \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -178,9 +186,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{303 KB}}             &        227 KB             &    0,7501                      &           57                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &      229 KB               &       0,7575                   &         12                 \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      237 KB               &       0,7822                   &      125                \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{303 KB}}             &        227 KB             &    75,01 \%                     &           57                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &      229 KB               &       75,75 \%                  &         12                 \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      237 KB               &       78,22 \%                  &      125                \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -191,9 +199,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &        157 KB             &      0,6108                    &               54              \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       151 KB              &         0,5882                 &            10              \\\cline{3-5}
-		\textbf{JPEG2000} &                        &       155 KB              &         0,6047                 &       171               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &        157 KB             &      61,08 \%                   &               54              \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       151 KB              &         58,82 \%                &            10              \\\cline{3-5}
+		\textbf{JPEG2000} &                        &       155 KB              &         60,47 \%                &       171               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -204,9 +212,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      148 KB               &       0,5757                   &           63                   \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &        136 KB             &         0,5295                 &       10                   \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      139 KB               &          0,5395                &       150               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      148 KB               &       57,57 \%                  &           63                   \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &        136 KB             &         52,95 \%                &       10                   \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      139 KB               &          53,95 \%               &       150               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -217,9 +225,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{160 KB}}             &      103 KB               &    0,6418                      &           37                  \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &     102 KB                &        0,6369                  &           6               \\\cline{3-5}
-		\textbf{JPEG2000} &                        &     114 KB                &        0,712                  &        127              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{160 KB}}             &      103 KB               &    64,18 \%                     &           37                  \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &     102 KB                &        63,69 \%                 &           6               \\\cline{3-5}
+		\textbf{JPEG2000} &                        &     114 KB                &        71,20 \%                 &        127              \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -230,9 +238,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &     200 KB                &        0,7628                  &         49                    \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       194 KB             &        0,7518                 &           10               \\\cline{3-5}
-		\textbf{JPEG2000} &                        &       196 KB              &          0,7637                &     182                 \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &     200 KB                &        76,28 \%                 &         49                    \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       194 KB             &        75,18 \%                &           10               \\\cline{3-5}
+		\textbf{JPEG2000} &                        &       196 KB              &          76,37 \%               &     182                 \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -243,9 +251,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{301 KB}}             &       248 KB              &      0,8253                    &            65                 \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       240 KB              &          0,8064                &            12              \\\cline{3-5}
-		\textbf{JPEG2000} &                        &       252 KB              &          0,8376                &       241               \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{301 KB}}             &       248 KB              &      82,53 \%                   &            65                 \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       240 KB              &          80,64 \%               &            12              \\\cline{3-5}
+		\textbf{JPEG2000} &                        &       252 KB              &          83,76 \%               &       241               \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -256,9 +264,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      156 KB               &     0,6056                     &          56                   \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &       144 KB              &       0,5617                   &             11             \\\cline{3-5}
-		\textbf{JPEG2000} &                        &       148 KB              &       0,5773                   &        150              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      156 KB               &     60,56 \%                    &          56                   \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &       144 KB              &       56,17 \%                  &             11             \\\cline{3-5}
+		\textbf{JPEG2000} &                        &       148 KB              &       57,73 \%                  &        150              \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -269,9 +277,9 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &         104 KB            &     0,4035                     &          88                   \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &      133 KB               &          0,5154                &           9               \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      142 KB               &          0,5539                &     169                 \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &         104 KB            &     40,35 \%                    &          88                   \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &      133 KB               &          51,54 \%               &           9               \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      142 KB               &          55,39 \%               &     169                 \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -282,8 +290,8 @@ Podstawą dla obrazów z zestawu Waterloo Greyset 2 był format \textbf{PGM} -- 
 	\begin{tabular}{|c|c|c|c|c|}                                             
 		\hline
 		& \textbf{Rozmiar przed} & \textbf{Rozmiar po} & \textbf{Wspł. kompresji} & \textbf{Czas {[}ms{]}} \\ \hline 
-		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      137 KB               &     0,5317                     &          63                   \\\cline{3-5}
-		\textbf{JPEG-LS}  &                        &      129 KB               &       0,5017                   &         9                 \\\cline{3-5}
-		\textbf{JPEG2000} &                        &      128 KB               &       0,4990                   &        147              \\ \hline
+		\textbf{PNG}      &          \multicolumn{1}{c|}{\multirow{2}{*}{257 KB}}             &      137 KB               &     53,17 \%                    &          63                   \\\cline{3-5}
+		\textbf{JPEG-LS}  &                        &      129 KB               &       50,17 \%                  &         9                 \\\cline{3-5}
+		\textbf{JPEG2000} &                        &      128 KB               &       49,90 \%                  &        147              \\ \hline
 	\end{tabular}
 \end{table}
