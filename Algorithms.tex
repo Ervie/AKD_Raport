@@ -10,7 +10,7 @@ Cechy algorytmu PNG:
 	\item Kompresja polega na wykonaniu transformacji każdej linii obrazu, po czym skompresowaniu go za pomocą algorytmu deflate.
 	\item Transformacja polega na obliczeniu różnicy pomiędzy wartością piksela, a wartością obliczoną na podstawie funkcji przewidującej.
 	\item Funkcje przewidujące to funkcje wyliczające wartości na podstawie wartości sąsiadujących pikseli.
-	\item Stosowane jest kodowanie LZ77, a do kodowania położenia i długości dopasowanej długości używa sie kodów przedrostkoych zmiennej długości (predefiniowanych lub kodów Huffmana z ograniczeniem).
+	\item Stosowane jest kodowanie LZ77, a do kodowania położenia i długości dopasowanej sekwencji używa sie kodów przedrostkowych zmiennej długości (predefiniowanych lub kodów Huffmana z ograniczeniem).
 \end{itemize}
 
 \subsection{JPEG-LS}
@@ -20,9 +20,9 @@ Cechy algorytmu PNG:
 Uogólniony schemat algorytmu JPEG-LS:
 
 \begin{enumerate}
-	\item \textbf{Wykrywanie krawędzi pionowych i poziomych} -- stosowany w tym celu jest prosty predykat nieliniowy (wyznaczanie jedynie przy pomocy stałopozycyjnych operacji dodawania/odejmowania i porównań).
+	\item \textbf{Wykrywanie krawędzi pionowych i poziomych} -- stosowany w tym celu jest prosty predykat nieliniowy (wyznaczanie jedynie przy pomocy stałopozycyjnych operacji dodawania/odejmowania i porównań liczb stałopozycyjnych).
 	\item \textbf{Kodowanie} -- przy pomocy kodera entropijnego i zmodyfikowanej (uproszczonej) rodziny kodów Rice'a. Na tym etapie koduje się również błędy predykcji.
-	\item \textbf{Modelowanie kontekstu} -- wyznaczony na podstawie 3 gradientówModel jest dedykowany dla kodów rodziny Rice'a.
+	\item \textbf{Modelowanie kontekstu} -- wyznaczony na podstawie 3 gradientów model jest dedykowany dla kodów rodziny Rice'a.
 \end{enumerate}
 
 \subsection{JPEG2000}
@@ -38,5 +38,5 @@ Uogólniony schemat algorytmu JPEG2000:
 	\item \textbf{Wyznaczenie transformaty falkowej dla każdego kafelka} -- przed transformatą należy ekstrapolować wiersze. W przypadku kompresji bezstratnej, stosujemy transformatę odwracalną.
 	\item \textbf{Kwantyzacja współczynników transformaty} -- dla kompresji bezstratnej krok zawsze wynosi 1. W przypadku operacji kompresji stratnej koder dobiera krok, aby możliwe było osiągnięcie zadanego współczynnika.
 	\item \textbf{Kodowanie skwantowanych współczynników} -- przy pomocy kodera arytmetycznego.
-	\item \textbf{Zapisanie zakodowanych danych w pliku o strukturze opisej przez standard}
+	\item \textbf{Zapisanie zakodowanych danych w pliku o strukturze opisej przez standard.}
 \end{enumerate}

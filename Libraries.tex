@@ -36,7 +36,7 @@ Aby uruchomić kompresję plików, należy posłużyć się aplikacją \textbf{p
 
 \subsubsection{Instalacja}
 
-\textbf{JPEG-LS} jest kodekiem implementującym algorytm kompresji i dekompresji do formaty Loseless JPEG (JPEG-LS). Aby móc skorzystać z algorytmu, należy:
+\textbf{SPMG/JPEG-LS} jest kodekiem implementującym algorytm kompresji i dekompresji do formatu JPEG-LS. Aby móc skorzystać z algorytmu, należy:
 
 \begin{enumerate}
 	\item Pobrać pliki źródłowe ze strony domowej projektu (\url{http://www.stat.columbia.edu/~jakulin/jpeg-ls/mirror.htm}) i wypakować do wybranego przez siebie folderu.
@@ -76,13 +76,13 @@ Nazwa pliku wyjściowego jest opcjonalna, jest ona generowana na podstawie nazwy
 \begin{enumerate}
 	\item Pobrać i wypakować pliki źródłowe ze strony projektu (\url{http://www.ece.uvic.ca/~frodo/jasper/}) do wybranej przez siebie lokalizacji.
 	
-	\item Utworzenie dodatkowy zmiennych środowiskowych:
+	\item Utworzyć dodatkowe zmienne środowiskowe:
 	\begin{enumerate}
-		\item \textbf{\%SOURCE\textunderscore DIR\%} -- katalog nadrzędny, w którym wypakowane zostały pobrane pliki
-		\item \textbf{\%BUILD\textunderscore DIR\%} -- ścieżka do katalogu używanego do zbudowania aplikacji
-		\item \textbf{\%INSTALL\textunderscore DIR\%} -- ścieżka do katalogu używanego do zainstalowania aplikacji
+		\item \textbf{\%SOURCE\textunderscore DIR\%} -- katalog nadrzędny, w którym wypakowane zostały pobrane pliki.
+		\item \textbf{\%BUILD\textunderscore DIR\%} -- ścieżka do katalogu używanego do zbudowania aplikacji.
+		\item \textbf{\%INSTALL\textunderscore DIR\%} -- ścieżka do katalogu używanego do zainstalowania aplikacji.
 	\end{enumerate}
-	Zmienne te są zdefiniowane pliku make i będą wykorzystywane w trakcie instalacji.
+	Zmienne te są zdefiniowane pliku w make i będą wykorzystywane w trakcie instalacji.
 	
 	\item W wierszy poleceń wykonać polecenie:
 	
